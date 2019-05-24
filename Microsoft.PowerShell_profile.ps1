@@ -76,3 +76,6 @@ function adbwifi {
 	adb connect $ip
 }
 
+function pipstart {
+	pipenv run python app.py
+}
