@@ -65,7 +65,9 @@ function reload {
 }
 
 function glog {
-	git log --graph --decorate --pretty=oneline --abbrev-commit --all
+	# git log --graph --decorate --pretty=oneline --abbrev-commit --all
+	git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
 }
 
 function adbwifi {
