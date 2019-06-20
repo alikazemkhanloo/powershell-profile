@@ -4,7 +4,12 @@ function  rnra  {react-native run-android}
 function  air  {
 	adb install -r android/app/build/outputs/apk/release/app-release.apk 
 }
-function  ar ($port=8081)  {adb reverse tcp:$port tcp:$port}
+function  ar ($port=8081)  {
+	if($port -eq 8081 ){
+	  adb reverse tcp:5000 tcp:5000
+	}
+	adb reverse tcp:$port tcp:$port
+}
 function  arr  {adb reverse tcp:9090 tcp:9090}
 function  cskd  {ssh prds@95.211.219.103}
 function  gra  {
