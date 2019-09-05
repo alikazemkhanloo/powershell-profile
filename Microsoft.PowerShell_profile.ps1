@@ -69,6 +69,10 @@ function reload {
 	adb shell input text 'RR'
 }
 
+function bsh {
+  ssh app@171.22.27.116
+}
+
 function glog {
 	# git log --graph --decorate --pretty=full --abbrev-commit --all
 	git log --all --graph --pretty=format:'%C(auto) %h %d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
