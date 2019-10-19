@@ -55,7 +55,7 @@ function bsh {
 
 function glog {
 	# git log --graph --decorate --pretty=full --abbrev-commit --all
-	git log --all --graph --pretty=format:'%C(auto) %h %d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	git log --branches --graph --pretty=format:'%C(auto) %h %d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 }
 
