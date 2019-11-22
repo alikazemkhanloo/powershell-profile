@@ -55,7 +55,7 @@ function bsh {
 
 function glog {
 	# git log --graph --decorate --pretty=full --abbrev-commit --all
-	git log --branches --graph --pretty=format:'%C(auto) %h %d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	git log --all --graph --pretty=format:'%C(auto) %h %d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 }
 
@@ -69,4 +69,15 @@ function adbwifi {
 
 function pipstart {
 	pipenv run python app.py
+}
+
+function fogit ($state='e') {
+	if($state -eq 'e'){
+		git config --global http.proxy fodev.org:8118
+		git config --global https.proxy fodev.org:8118
+	}
+	if($state -eq 'd'){
+		git config --global --unset http.proxy
+		git config --global --unset https.proxy
+	}
 }
